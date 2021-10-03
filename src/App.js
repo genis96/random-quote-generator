@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Generate from './Generate';
-import './App.css';
 
 import fbIcon from './images/facebook.svg';
 import twitterIcon from './images/twitter.svg';
@@ -37,11 +35,21 @@ function App() {
   }
 
   return (
-    <div className='App'>
-      <div className='quote'>
-        <h1>{quote}</h1>
-        <small> {author} </small>
-      </div> <br></br>
+    <div className='quote-container'>
+      <div className='quote'> <h3>{quote}</h3></div>
+      <div className='author'> <small>{author}</small></div>
+      
+      <div className='btn'>
+        <div className='social-media'>
+          <a className='tweet' href='#'>
+            <span><img src={twitterIcon} alt="" /></span>
+          </a>
+          <a className='fb' href='#'>
+            <span><img src={fbIcon} alt="" /></span>
+          </a>
+        </div>
+      </div>
+      
       <button className='new-quote' onClick={activateButton}>New Quote</button>
     </div>
   );
