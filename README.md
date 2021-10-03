@@ -2,3 +2,4 @@
 
 # Stoic Quote API
 
+https://stoicquotesapi.com/

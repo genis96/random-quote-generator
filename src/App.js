@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './App.css';
 import fbIcon from './images/facebook.svg';
 import twitterIcon from './images/twitter.svg';
 
@@ -36,6 +36,7 @@ function App() {
 
   return (
     <div className='quote-container'>
+      <div className='title'><h1>Stoic Quotes</h1></div>
       <div className='quote'> <h3>{quote}</h3></div>
       <div className='author'> <small>{author}</small></div>
       
@@ -48,9 +49,8 @@ function App() {
             <span><img src={fbIcon} alt="" /></span>
           </a>
         </div>
+      <button className='new-quote-btn' onClick={activateButton}>New Quote</button>
       </div>
-      
-      <button className='new-quote' onClick={activateButton}>New Quote</button>
     </div>
   );
 }
